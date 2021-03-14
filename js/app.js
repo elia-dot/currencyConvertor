@@ -2,7 +2,7 @@ const to = document.getElementById('to');
 let options = ''
 
 async function getList(){
-    const listPromise = await fetch('/Common-Currency.json');
+    const listPromise = await fetch('./Common-Currency.json');
     const list = await listPromise.json();
     Object.keys(list).forEach(currencyCode => {
         options = 
