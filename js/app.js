@@ -2,7 +2,7 @@ const to = document.getElementById('to');
 let options = ''
 
 async function getList(){
-    const listPromise = await fetch('https://gist.github.com/Fluidbyte/2973986.js', mode, "no-cors");
+    const listPromise = await fetch('../json/Common-Currency.json');
     const list = await listPromise.json();
     Object.keys(list).forEach(currencyCode => {
         options = 
